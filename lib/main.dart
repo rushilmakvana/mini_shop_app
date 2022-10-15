@@ -38,6 +38,12 @@ class MyApp extends StatelessWidget {
       child: Consumer<Auth>(
         builder: (ctx, auth, _) => MaterialApp(
           theme: ThemeData(
+            useMaterial3: true,
+            appbarTheme:AppbarTheme(
+            elevation:10,
+              centerTitle:true,
+              
+            )
             // pageTransitionsTheme: const PageTransitionsTheme(
             //   builders: <TargetPlatform, PageTransitionsBuilder>{
             //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
@@ -50,6 +56,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.deepPurple,
             // ignore: deprecated_member_use
             accentColor: const Color.fromARGB(255, 235, 225, 116),
+            
             // canvasColor: Color.fromARGB(255, 168, 234, 215),
           ),
           routes: {
